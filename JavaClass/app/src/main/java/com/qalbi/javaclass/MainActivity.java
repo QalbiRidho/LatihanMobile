@@ -20,14 +20,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         initBarang();
-        showString+=arraBarang[0].toString();
-        addSeparator();
-        showString+=arraBarang[1].toString();
-        addSeparator();
-        showString+=arraBarang[5].toString();
-        addSeparator();
-        showString+=arraBarang[3].toString();
-        showText.setText(showString);
+//        showString+=arraBarang[0].toString();
+//        addSeparator();
+//        showString+=arraBarang[1].toString();
+//        addSeparator();
+//        showString+=arraBarang[5].toString();
+//        addSeparator();
+//        showString+=arraBarang[3].toString();
+
+        transaksi trans1 = new transaksi();
+        trans1.addBarang(arraBarang[3]);
+        trans1.addBarang(arraBarang[7]);
+        trans1.addBarang(arraBarang[1]);
+        showString += trans1.printTransaksi();
+
+
+        showText.setText(showString);;
     }
 
     public void addSeparator(){
